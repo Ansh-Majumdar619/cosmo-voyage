@@ -6,6 +6,7 @@ import MarsModel from '../components/models/MarsModel';
 import SaturnModel from '../components/models/SaturnModel';
 import EuphoraModel from '../components/models/EuphoraModel';
 import BlackModel from '../components/models/BlackHole';
+import API from '../api';
 
 
 const Planets = () => {
