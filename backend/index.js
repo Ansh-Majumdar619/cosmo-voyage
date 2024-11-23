@@ -4,6 +4,7 @@ const cors = require('cors');
 require('dotenv').config(); // Load environment variables
 const userRoutes = require('./routes/userRoutes');
 const formRoutes = require('./routes/formRoutes');
+const planetRoutes = require('./routes/planetRoutes');
 const cookieParser = require('cookie-parser'); // For handling cookies (e.g., JWT tokens)
 
 // Initialize the app
@@ -33,7 +34,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 // Routes
 app.use('/api/users', userRoutes);  // User-related routes (signup, login)
 app.use('/api/forms', formRoutes);  // Form submission routes
-
+app.use('/api', planetRoutes);
 // Global error handler
 app.use((err, req, res, next) => {
   console.error(err);
