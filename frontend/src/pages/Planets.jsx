@@ -12,6 +12,21 @@ const Planets = () => {
 
   const navigate = useNavigate(); // Initialize the navigate function
 
+useEffect(() => {
+    const fetchPlanets = async () => {
+      try {
+        const response = await axios.get('https://cosmo-voyage.onrender.com/api/planets'); // API endpoint for planets data
+        setPlanetData(response.data); // Set planet data state
+      } catch (error) {
+        console.error("Error fetching planet data:", error);
+      }
+    };
+
+    fetchPlanets();
+  }, []);
+
+
+  
   // Function to handle button click and navigate to the contact page
   const goToContactPage = () => {
     navigate('/contact'); // This will redirect to the /contact route
