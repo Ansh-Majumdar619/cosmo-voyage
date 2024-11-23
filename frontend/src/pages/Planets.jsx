@@ -1,33 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/Planets.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'; // Importing axios for API calls
+
 import MoonModel from '../components/models/MoonModel';
 import MarsModel from '../components/models/MarsModel';
 import SaturnModel from '../components/models/SaturnModel';
 import EuphoraModel from '../components/models/EuphoraModel';
 import BlackModel from '../components/models/BlackHole';
-import API from '../api';
-
 
 const Planets = () => {
-
+  const [planets, setPlanets] = useState([]); // State to store the fetched planet data
   const navigate = useNavigate(); // Initialize the navigate function
 
-useEffect(() => {
-    const fetchPlanets = async () => {
+  // Fetch planet data from backend on component mount
+  useEffect(() => {
+    const fetchPlanetsData = async () => {
       try {
-        const response = await axios.get('https://cosmo-voyage.onrender.com/api/planets'); // API endpoint for planets data
-        setPlanetData(response.data); // Set planet data state
+        const response = await axios.get('https://cosmo-voyage-backend.onrender.com/api/planets'); // API call to fetch planet data
+        setPlanets(response.data);  // Update state with the fetched planet data
       } catch (error) {
-        console.error("Error fetching planet data:", error);
+        console.error('Error fetching planet data:', error);
       }
     };
 
-    fetchPlanets();
-  }, []);
+    fetchPlanetsData();
+  }, []); // The empty dependency array ensures this effect runs once when the component mounts
 
-
-  
   // Function to handle button click and navigate to the contact page
   const goToContactPage = () => {
     navigate('/contact'); // This will redirect to the /contact route
@@ -40,7 +39,6 @@ useEffect(() => {
         <section className="planet-section moon">
           <h1>THE MOON</h1>
           <div className="moon-left">
-
             <p>
               Embark on an unforgettable journey to the Moon, where the extraordinary meets the unknown. Our exclusive Moon Travel Package offers a once-in-a-lifetime experience of lunar exploration. Below are the details:
               <br /><br />
@@ -58,22 +56,20 @@ useEffect(() => {
           </div>
 
           <div className="moon-right">
-
             <button onClick={goToContactPage} className="contact-btn">
               Book Now
             </button>
 
-            <div className='model-box' >
+            <div className='model-box'>
               <MoonModel />
             </div>
-
           </div>
         </section>
 
-        {/* Other Planet Sections */}
+        {/* Mars Section */}
         <section className="planet-section mars">
           <h1>THE MARS</h1>
-          <div className='mars-left' >
+          <div className='mars-left'>
             <p>
               Embark on an exciting journey to Mars, the red planet that has fascinated humanity for centuries. Our Mars Travel Package offers an opportunity to explore the Martian landscape and experience life on the fourth planet from the Sun. Below are the details:
               <br /><br />
@@ -90,20 +86,18 @@ useEffect(() => {
             </p>
           </div>
 
-
-          <div className='mars-right' >
+          <div className='mars-right'>
             <button onClick={goToContactPage} className="contact-btn">
               Book Now
             </button>
 
-            <div className='model-box' >
+            <div className='model-box'>
               <MarsModel />
             </div>
           </div>
         </section>
 
-
-
+        {/* Saturn Section */}
         <section className="planet-section saturn">
           <h1>THE SATURN</h1>
           <div className='saturn-left'>
@@ -127,15 +121,13 @@ useEffect(() => {
               Book Now
             </button>
 
-            <div className='model-box' >
+            <div className='model-box'>
               <SaturnModel />
             </div>
           </div>
-
         </section>
 
-
-
+        {/* Euphora Section */}
         <section className="planet-section euphora">
           <h1>THE EUPHORA</h1>
           <div className='euphora-left'>
@@ -155,22 +147,21 @@ useEffect(() => {
               Book your adventure now and be among the first to uncover the secrets of Euphora, the planet of light and wonder!
             </p>
           </div>
-          <div className='euphora-right' >
+          <div className='euphora-right'>
             <button onClick={goToContactPage} className="contact-btn">
               Book Now
             </button>
 
-            <div className='model-box' >
+            <div className='model-box'>
               <EuphoraModel />
             </div>
           </div>
         </section>
 
-
-
+        {/* Black Hole Section */}
         <section className="planet-section black-hole">
           <h1>THE BLACK HOLE</h1>
-          <div className='black-left' >
+          <div className='black-left'>
             <p>
               Venture into the enigmatic depths of space with our Black Hole Exploration Package. This one-of-a-kind journey takes you to the edge of a black hole, where the laws of physics bend and time dilates. Experience the most intense gravitational forces in the universe while observing the mysteries of space unfold before your eyes. Below are the details:
               <br /><br />
@@ -186,16 +177,14 @@ useEffect(() => {
               <br /><br />
               Prepare yourself for an unforgettable experience that will alter your perception of the universe!
             </p>
-
           </div>
 
-
-          <div className='black-right' >
-          <button onClick={goToContactPage} className="contact-btn">
+          <div className='black-right'>
+            <button onClick={goToContactPage} className="contact-btn">
               Book Now
             </button>
 
-            <div className='model-box' >
+            <div className='model-box'>
               <BlackModel />
             </div>
           </div>
@@ -203,6 +192,40 @@ useEffect(() => {
       </div>
     </div>
   );
-}
+};
 
 export default Planets;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
