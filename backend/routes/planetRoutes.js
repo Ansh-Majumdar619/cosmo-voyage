@@ -71,7 +71,7 @@ const planets = [
 ];
 
 // Route to fetch planet details
-router.get('/planets', (req, res) => {
+router.get('/api/planets', (req, res) => {
   try {
     res.status(200).json(planets); // Send planet data as response
   } catch (error) {
