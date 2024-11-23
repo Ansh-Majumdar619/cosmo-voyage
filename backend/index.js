@@ -34,7 +34,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 // Routes
 app.use('/api/users', userRoutes);  // User-related routes (signup, login)
 app.use('/api/forms', formRoutes);  // Form submission routes
-app.use('/api', planetRoutes);
+app.use('/api/planets', planetRoutes);
 // Global error handler
 app.use((err, req, res, next) => {
   console.error(err);
