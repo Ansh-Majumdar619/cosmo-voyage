@@ -17,7 +17,7 @@ const Planets = () => {
   useEffect(() => {
     const fetchPlanetsData = async () => {
       try {
-        const response = await axios.get('https://cosmo-voyage-backend.onrender.com/api/planets'); // API call to fetch planet data
+        const response = await axios.get('https://cosmo-voyage-backend.onrender.com/api/users/planets'); // API call to fetch planet data
         setPlanets(response.data);  // Update state with the fetched planet data
       } catch (error) {
         console.error('Error fetching planet data:', error);
