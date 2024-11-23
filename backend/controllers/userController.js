@@ -1,10 +1,10 @@
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs'); // Replaced bcrypt with bcryptjs
 
 // User Sign Up
 exports.signup = async (req, res) => {
-  const {email, password } = req.body;
+  const { email, password } = req.body;
 
   try {
     // Check if user already exists
@@ -50,7 +50,7 @@ exports.login = async (req, res) => {
     console.log('User Found:', { email: user.email });
 
     // Compare password
-    const isMatch = await user.comparePassword(password);
+    const isMatch = await bcrypt.compare(password, user.password); // Updated to bcryptjs's compare method
     console.log('Password Match:', isMatch);
 
     if (!isMatch) {
@@ -74,7 +74,6 @@ exports.login = async (req, res) => {
   }
 };
 
-
 // User Logout
 exports.logout = (req, res) => {
   try {
@@ -85,3 +84,6 @@ exports.logout = (req, res) => {
     res.status(500).json({ message: 'Server error', error });
   }
 };
+
+      
+    
