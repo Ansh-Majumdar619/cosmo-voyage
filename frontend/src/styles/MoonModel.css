@@ -1,0 +1,19 @@
+/* MoonModel.css */
+
+.model-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px; /* Fixed height to create a square shape */
+  width: 400px;  /* Fixed width to create a square shape */
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures no overflow */
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%; /* Makes the canvas take full size of the model box */
+}

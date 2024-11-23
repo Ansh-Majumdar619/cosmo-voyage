@@ -1,0 +1,296 @@
+@font-face {
+  font-family: orbitron;
+  src: url('/assets/fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+  font-family: exo2;
+  src: url('/assets/fonts/Exo2-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: starjedi;
+  src: url('/assets/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: russo;
+  src: url('/assets/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: orbit;
+  src: url('/assets/fonts/ORBIT PERSONAL USE.ttf');
+}
+
+@font-face {
+  font-family: domain;
+  src: url('/assets/fonts/domain font.ttf');
+}
+
+@font-face {
+  font-family: astro;
+  src: url('/assets/fonts/AstroSpace-0Wl3o.otf');
+}
+
+.home {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.model-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+}
+
+
+.box-1 {
+  font-family: orbitron;
+  width: 20vw;
+  height: auto;
+  position: relative;
+  margin-top: -10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 20px;
+  color: rgb(226, 190, 108);
+  text-align: left;
+  right: 20vw;
+  bottom: 30vh;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.box-2 {
+  font-family: starjedi;
+  font-weight: 400;
+  font-size: 25px;
+  width: 20vw;
+  height: auto;
+  position: relative;
+  margin-top: -60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 20px;
+  color: rgb(185, 189, 56);
+  text-align: center;
+  left: 40vw;
+  bottom: 30vh;
+  animation: float 1.5s ease-in-out infinite;
+}
+
+.page1 {
+  width: 100vw;
+  height: auto;
+  position: relative; 
+  background-color: #030b15;
+}
+
+.page1 h2 {
+  font-family: orbitron;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 50px;
+  color: #F2E5BF;
+  max-width: 500px; 
+  margin: 0 auto; 
+}
+
+.card-text{
+  font-family: exo2;
+  text-align: center;
+ 
+}
+
+.card-body{
+   background-color: #c9b579;
+}
+
+#sidetext{
+  font-family: russo;
+}
+
+.paragraph{
+  font-family: orbitron;
+  font-size: 20px;
+  font-weight: 500;
+  color: #5E2F14;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive styles */
+
+/* Mobile Devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+  .box-1 {
+    width: 50vw;
+    /* right: 10vw; */
+    left: 25vw;
+    bottom: 20vh;
+    font-size: 0.8rem;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .box-2 {
+    width: 50vw;
+    left: 25vw;
+    bottom: 15vh;
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .page1 h2 {
+    font-size: 24px;
+    padding-top: 20px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .home {
+    width: 100%;
+    padding: 0;
+  }
+
+  .model-container {
+    width: 100%;
+    height: 90vh;
+    margin: 0;
+  }
+
+  .box-1 {
+    width: 40vw;  /* Adjusted width to fit better on tablets */
+    right: 5vw;   /* Reduced right space to avoid overflow */
+    bottom: 25vh;
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  .box-2 {
+    width: 40vw;  /* Adjusted width for consistent spacing */
+    left: 30vw;   /* Centered the box on the screen */
+    bottom: 20vh;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .page1 {
+    width: 100%;
+    height: auto;
+    padding: 0 10px;  /* Added padding to avoid content sticking to the edges */
+  }
+
+  .page1 h2 {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
+
+  .paragraph {
+    font-size: 18px;
+  }
+
+  /* Additional fix for ensuring no horizontal overflow */
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Ensure no horizontal scroll */
+  }
+
+  /* Flex container adjustments for better alignment */
+  .model-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-1, .box-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+/* Desktop (769px and above) */
+@media only screen and (min-width: 769px) {
+  .box-1 {
+    width: 20vw;
+    right: 20vw;
+    bottom: 30vh;
+    font-size: 1.5rem;
+    margin-top: -10%;
+  }
+
+  .box-2 {
+    width: 20vw;
+    left: 40vw;
+    bottom: 30vh;
+    font-size: 2rem;
+    margin-top: -60vh;
+  }
+
+  .page1 h2 {
+    font-size: 40px;
+    padding-top: 50px;
+  }
+
+  .card-text {
+    font-size: 18px;
+  }
+
+  .paragraph {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,178 @@
+@font-face {
+  font-family: orbitron;
+  src: url('/assets/fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+  font-family: exo2;
+  src: url('/assets/fonts/Exo2-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: starjedi;
+  src: url('/assets/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: russo;
+  src: url('/assets/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: orbit;
+  src: url('/assets/fonts/ORBIT PERSONAL USE.ttf');
+}
+
+@font-face {
+  font-family: domain;
+  src: url('/assets/fonts/domain font.ttf');
+}
+
+@font-face {
+  font-family: astro;
+  src: url('/assets/fonts/AstroSpace-0Wl3o.otf');
+}
+
+
+
+
+/* Add this to your Navbar.css */
+.nav-username {
+  margin-left: 20vw; /* Pushes the username to the right */
+  color: rgb(0, 0, 0); /* Change to your desired color */
+  font-weight: bold; /* Optional styling */
+}
+
+
+
+
+
+ .navbar {
+  font-family: orbitron;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 10px 0;
+  background-color: beige;
+  backdrop-filter: blur(70px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+  margin-left: 37vw;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(195, 186, 52);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #bbc39e;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(195, 186, 52);
+  transition: transform 0.3s ease;
+}
+
+.hamburger .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger .bar.open:nth-child(2) {
+  opacity: 5;
+}
+
+.hamburger .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    justify-content: space-between;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: rgba(96, 88, 88, 0.85);
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .navbar-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  .nav-link {
+    color: #ffd700;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .nav-link:nth-child(1) {
+    color: #ac9a9a;
+  }
+
+  .nav-link:nth-child(2) {
+    color: #ac9a9a;
+  }
+
+  .nav-link:nth-child(3) {
+    color: #ac9a9a;
+  }
+
+  .nav-link:nth-child(4) {
+    color: #ac9a9a;
+  }
+
+  .nav-link:nth-child(5) {
+    color: #ac9a9a;
+  }
+
+} 

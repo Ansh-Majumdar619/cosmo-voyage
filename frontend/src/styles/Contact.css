@@ -1,0 +1,163 @@
+@font-face {
+  font-family: orbitron;
+  src: url('/assets/fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: exo2;
+  src: url('/assets/fonts/Exo2-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: starjedi;
+  src: url('/assets/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: russo;
+  src: url('/assets/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: orbit;
+  src: url('/assets/fonts/ORBIT PERSONAL USE.ttf');
+}
+
+@font-face {
+  font-family: domain;
+  src: url('/assets/fonts/domain font.ttf');
+}
+
+@font-face {
+  font-family: astro;
+  src: url('/assets/fonts/AstroSpace-0Wl3o.otf');
+}
+
+
+/* Container for the contact form */
+.contact-container {
+  /* background-color: #D8B588;  */
+  background-color: #141414;
+  padding: 30px; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+
+
+
+.contact-heading {
+  color: aliceblue;
+  font-family: russo;
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Contact Form Container */
+.contact-form {
+  /* background-color: #B96C48; */
+  background-color: rgb(181, 153, 98);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels */
+.contact-form-label {
+  font-family: orbitron;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #403D39;
+  display: inline-block; /* Ensures labels are displayed inline */
+  width: 100%; /* Ensure labels take full width of the form container */
+  margin-bottom: 0.5rem; /* Adds some space between label and input */
+}
+
+/* Form Inputs */
+.contact-form-control, .contact-form-select {
+  font-family: exo2;
+  font-weight: 500;
+  border: 2px solid #D5C67F;
+  background-color: #E6DDC6;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%; /* Ensure inputs take full width of their container */
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+/* Buttons */
+.contact-btn-primary {
+  background-color: #141414;
+  color: wheat;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.contact-btn-primary:hover{
+  background-color: wheat;
+  color: #141414;
+}
+
+.contact-btn-danger {
+  background-color: #C43D3D;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.contact-btn-danger:hover{
+  background-color: #141414;
+  color: #C43D3D;
+}
+
+/* Notification Alert */
+.contact-alert {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* Spacing Adjustments for Form Elements */
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .contact-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-btn-primary, .contact-btn-danger {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-heading h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-form-label, .contact-btn-primary, .contact-btn-danger {
+    font-size: 0.9rem;
+  }
+}

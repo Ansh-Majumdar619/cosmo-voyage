@@ -1,0 +1,93 @@
+@font-face {
+  font-family: orbitron;
+  src: url('/assets/fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+  font-family: exo2;
+  src: url('/assets/fonts/Exo2-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: starjedi;
+  src: url('/assets/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: russo;
+  src: url('/assets/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: orbit;
+  src: url('/assets/fonts/ORBIT PERSONAL USE.ttf');
+}
+
+@font-face {
+  font-family: domain;
+  src: url('/assets/fonts/domain font.ttf');
+}
+
+@font-face {
+  font-family: astro;
+  src: url('/assets/fonts/AstroSpace-0Wl3o.otf');
+}
+
+
+
+
+
+
+
+
+.footer-container {
+  background-color: transparent;
+}
+
+.footer-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #adb5bd;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #f8f9fa;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-icon {
+  color: #adb5bd;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #f8f9fa;
+}
+
+.footer-bottom-text {
+  font-size: 0.8rem;
+  color: #868e96;
+}

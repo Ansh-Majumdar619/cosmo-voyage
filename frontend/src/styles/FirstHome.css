@@ -1,0 +1,938 @@
+@font-face {
+  font-family: orbitron;
+  src: url('/assets/fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+  font-family: exo2;
+  src: url('/assets/fonts/Exo2-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: starjedi;
+  src: url('/assets/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: russo;
+  src: url('/assets/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: orbit;
+  src: url('/assets/fonts/ORBIT PERSONAL USE.ttf');
+}
+
+@font-face {
+  font-family: domain;
+  src: url('/assets/fonts/domain font.ttf');
+}
+
+@font-face {
+  font-family: astro;
+  src: url('/assets/fonts/AstroSpace-0Wl3o.otf');
+}
+
+
+
+/* Global Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container-fluid {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Background Section */
+.background-color {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+/* Scrollable Box */
+.scrollable-box {
+  background-color: rgba(0, 0, 0, 0.95);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1300px;
+  max-height: 90%;
+  height: auto;
+  /* Ensures box adjusts dynamically */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  text-align: justify;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.scrollable-box::-webkit-scrollbar {
+  display: none;
+  /* Hides the scrollbar in WebKit browsers */
+}
+
+.scrollable-box {
+  scrollbar-width: none;
+  /* Hides the scrollbar in Firefox */
+}
+
+/* Flexbox for Content */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Ensures responsiveness */
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  /* Adds space between items */
+}
+
+/* Left Box (Text Content) */
+.left-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+}
+
+.left-box h2 {
+  color: #D2B685;
+  font-family: 'astro', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.left-box p {
+  color: #B69767;
+  font-family: 'exo2', sans-serif;
+}
+
+/* Right Box (Image Content) */
+.right-box {
+  border-radius: 20px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Logo Styling */
+.box-logo {
+  display: block;
+  max-width: 150px;
+  margin: 0 auto 20px;
+}
+
+
+.circle-container {
+  position: relative;
+  /* Enables positioning of child elements */
+  padding: 150px 0;
+  /* Adequate padding for desktop */
+  min-height: 800px;
+  /* Ensures flexibility for height */
+  text-align: center;
+  /* Center-align all child elements */
+}
+
+.circle-image {
+  width: 60vw;
+  /* Default size relative to viewport */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin-top: 10vh;
+  /* Spacing from top */
+  border: 1px solid #AD7750;
+  /* Add border for styling */
+  border-radius: 20px;
+  /* Rounded corners for a softer look */
+  object-fit: cover;
+  /* Ensure proper scaling */
+}
+
+.third-container {
+  display: flex;
+  justify-content: space-between;
+  /* Ensures space between leftbox2 and rightbox2 */
+  align-items: center;
+  padding: 100px 0;
+  height: 1000px;
+}
+
+.leftbox2 {
+  width: 50%;
+  /* Make left box cover 50% of the container */
+  height: 100%;
+  padding: 20px;
+  /* Add padding to leftbox2 */
+  box-sizing: border-box;
+  /* Ensures padding doesn't overflow the width */
+}
+
+.leftbox2 h2 {
+  font-family: orbitron;
+  color: #BDAB9D;
+  font-size: 40px;
+  margin-left: 10vw;
+}
+
+.leftbox2 p {
+  color: #D8CFCC;
+  font-family: russo;
+  margin-left: 10vw;
+
+}
+
+.rightbox2 {
+  width: 50%;
+  /* Make right box cover 50% of the container */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.right-image2 {
+  max-width: 100%;
+  max-height: 500px;
+  margin-top: 40vh;
+  object-fit: cover;
+  /* Keeps the image’s aspect ratio */
+  clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%);
+  /* Rounded corners effect */
+}
+
+
+
+.fourth-container {
+  display: flex;
+  flex-direction: column;
+  /* Stack sections vertically */
+  align-items: center;
+  /* Center horizontally (optional) */
+  justify-content: space-between;
+  /* Ensure equal spacing */
+  padding: 0;
+  /* Remove extra padding */
+  height: 1000px;
+  /* Set total height for the container */
+}
+
+.fourth-1,
+.fourth-2,
+.fourth-3 {
+  flex: 1;
+  /* Distribute equal height for all sections */
+  width: 100%;
+  /* Ensure sections span the full width */
+  text-align: center;
+  /* Center content inside each section */
+  padding: 20px;
+  /* Add padding for content */
+  /* border-top: 1px solid #ccc;  */
+  /* border-bottom: 1px solid #ccc;  */
+}
+
+.fourth-1 h1 {
+  font-family: astro;
+  font-size: 60px;
+  color: #BDAB9D;
+}
+
+.fourth-1 h4 {
+  padding-top: 40px;
+  font-family: exo2;
+  text-align: center;
+  color: #D8CFCC;
+}
+
+.whiteline {
+  display: block;
+  /* Ensure it's a block element to push it to a new line */
+  margin-top: 20px;
+  /* Optional: Adjust the margin between h4 and image */
+  width: 10%;
+  /* Reduce the size of the whiteline image */
+  height: auto;
+  /* Maintain aspect ratio of the image */
+  margin-left: auto;
+  /* Optional: Center-align image horizontally */
+  margin-right: auto;
+  /* Optional: Center-align image horizontally */
+}
+
+.fourth-2 h1 {
+  font-family: astro;
+  font-size: 60px;
+  color: #BDAB9D;
+}
+
+.fourth-2 h4 {
+  padding-top: 40px;
+  font-family: exo2;
+  text-align: center;
+  color: #D8CFCC;
+
+}
+
+.fourth-3 h1 {
+  font-family: astro;
+  font-size: 60px;
+  color: #BDAB9D;
+}
+
+.fourth-3 h4 {
+  padding-top: 40px;
+  font-family: exo2;
+  text-align: center;
+  color: #D8CFCC;
+
+}
+
+
+.fifth-container {
+  display: flex;
+  justify-content: space-between;
+  /* Ensures space between leftbox2 and rightbox2 */
+  align-items: center;
+  padding: 100px 0;
+  height: 800px;
+}
+
+.fifth-1 {
+  width: 50%;
+  /* Make left box cover 50% of the container */
+  height: 100%;
+  padding: 20px;
+  /* Add padding to leftbox2 */
+  box-sizing: border-box;
+  /* Ensures padding doesn't overflow the width */
+}
+
+.fifth-2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.fifth-image {
+  max-width: 100%;
+  max-height: 500px;
+  margin-top: 5vh;
+  object-fit: cover;
+}
+
+
+.fifth-1 h4 {
+  color: #734D35;
+  font-family: russo;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.fifth-1 h1 {
+  color: #AD7750;
+  font-family: orbitron;
+  font-size: 60px;
+  padding-bottom: 40px;
+
+}
+
+.fifth-1 p {
+  color: #BDAB9D;
+  font-family: astro;
+  font-size: 20px;
+}
+
+
+.sixth-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+  height: 800px;
+}
+
+
+.sixth-1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.sixth-image{
+  max-width: 100%;
+  max-height: 500px;
+  margin-top: 5vh;
+  border: 2px solid #AD7750;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.sixth-2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align children to the top */
+  align-items: center; /* Center the items horizontally */
+  padding: 0;
+}
+
+.sixth-2 h1 {
+  color: #CE7E3F;
+  font-family: domain;
+  font-size: 35px;
+  margin-top: 100px;
+  margin-bottom: 10px; /* Reduced margin to create space between h1 and p */
+}
+
+.sixth-2 p {
+  color: #E8D3BE;
+  font-family: astro;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 0; /* Ensure there's no unnecessary margin above the paragraph */
+}
+
+.adventure-button {
+  font-family: astro;
+  background-color: whitesmoke;
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  clip-path: polygon(5% 0%, 100% 0%, 100% 90%, 95% 100%, 0% 100%, 0% 10%);
+}
+
+.adventure-button:hover {
+  background-color: #BD6D2A;
+}
+
+
+
+
+
+
+.audio-button {
+  border: 1px solid goldenrod; 
+  border-radius: 20px;
+  padding: 0; /* Remove padding */
+  cursor: pointer; /* Make it clickable */
+}
+
+.speaker-icon {
+  border-radius: 20px;
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .scrollable-box {
+    width: 90%;
+    max-height: 400px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-box,
+  .right-box {
+    max-width: 100%;
+  }
+
+  .right-image {
+    width: 100%;
+  }
+
+  /* Adjust circle-container for medium screens (tablets) */
+  .circle-container {
+    display: flex;
+    justify-content: center;
+    /* Center align the circle image */
+    align-items: center;
+    padding: 60px 0;
+    /* Adjust padding for medium screens */
+    height: auto;
+    /* Allow dynamic height */
+  }
+
+  .circle-image {
+    width: 50vw;
+    /* Adjust width for tablets */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-top: 0;
+    /* Reset margin-top */
+    border-radius: 50%;
+    /* Ensure circular appearance */
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollable-box {
+    width: 90%;
+    max-height: 400px;
+  }
+
+  .circle-heading {
+    font-size: 1.5rem;
+  }
+
+  .circle-description {
+    font-size: 0.9rem;
+  }
+
+  .circle-container {
+    display: flex;
+    justify-content: center;
+    /* Center align the circle image */
+    align-items: center;
+    padding: 40px 0;
+    /* Reduce padding for small screens */
+    height: auto;
+    /* Allow flexible height */
+  }
+
+  .circle-image {
+    width: 80vw;
+    /* Adjust image width for small screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-top: 0;
+    /* Reset margin-top */
+    /* border-radius: 50%;  */
+  }
+
+  .above-circle-image {
+    top: -50px;
+    width: 80px;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .third-container {
+    flex-direction: column;
+    /* Stack the content vertically */
+    height: auto;
+    /* Allow flexible height */
+    padding: 50px 0;
+    /* Adjust padding for medium screens */
+  }
+
+  .leftbox2,
+  .rightbox2 {
+    width: 90%;
+    /* Adjust width for smaller screens */
+    height: auto;
+    /* Allow flexible height */
+    padding: 10px;
+    /* Reduce padding */
+  }
+
+  .leftbox2 h2 {
+    font-size: 35px;
+    /* Adjust font size */
+    margin-left: 5vw;
+    /* Adjust margin */
+  }
+
+  .leftbox2 p {
+    margin-left: 5vw;
+    /* Adjust margin */
+    font-size: 1rem;
+    /* Adjust font size */
+  }
+
+  .right-image2 {
+    max-height: 400px;
+    /* Reduce image size */
+    margin-top: 20px;
+    /* Add spacing between elements */
+  }
+}
+
+@media (max-width: 768px) {
+  .third-container {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+
+  .leftbox2,
+  .rightbox2 {
+    width: 100%;
+    /* Take full width */
+    text-align: center;
+    /* Center-align content */
+  }
+
+  .leftbox2 h2 {
+    font-size: 30px;
+    margin-left: 0;
+    /* Remove unnecessary margin */
+  }
+
+  .leftbox2 p {
+    margin-left: 0;
+    /* Remove unnecessary margin */
+  }
+
+  .right-image2 {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .third-container {
+    padding: 20px 0;
+  }
+
+  .leftbox2 h2 {
+    font-size: 25px;
+    /* Smaller font size */
+  }
+
+  .leftbox2 p {
+    font-size: 0.9rem;
+    /* Smaller font size */
+  }
+
+  .right-image2 {
+    max-height: 200px;
+    /* Smaller image size */
+  }
+}
+
+
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+  .fourth-container {
+    height: auto;
+    /* Allow container height to adjust */
+    padding: 20px;
+  }
+
+  .fourth-1,
+  .fourth-2,
+  .fourth-3 {
+    padding: 15px;
+  }
+
+  .fourth-1 h1,
+  .fourth-2 h1,
+  .fourth-3 h1 {
+    font-size: 50px;
+    /* Adjust h1 font size */
+  }
+
+  .fourth-1 h4,
+  .fourth-2 h4,
+  .fourth-3 h4 {
+    font-size: 18px;
+    /* Adjust h4 font size */
+  }
+
+  .whiteline {
+    width: 15%;
+    /* Increase size of the image slightly */
+  }
+}
+
+@media (max-width: 768px) {
+  .fourth-container {
+    height: auto;
+    /* Allow container height to adjust */
+    padding: 10px;
+  }
+
+  .fourth-1,
+  .fourth-2,
+  .fourth-3 {
+    padding: 10px;
+  }
+
+  .fourth-1 h1,
+  .fourth-2 h1,
+  .fourth-3 h1 {
+    font-size: 40px;
+    /* Adjust h1 font size */
+  }
+
+  .fourth-1 h4,
+  .fourth-2 h4,
+  .fourth-3 h4 {
+    font-size: 16px;
+    /* Adjust h4 font size */
+  }
+
+  .whiteline {
+    width: 20%;
+    /* Adjust the size of the whiteline image */
+  }
+}
+
+@media (max-width: 480px) {
+  .fourth-container {
+    padding: 5px;
+  }
+
+  .fourth-1,
+  .fourth-2,
+  .fourth-3 {
+    padding: 5px;
+  }
+
+  .fourth-1 h1,
+  .fourth-2 h1,
+  .fourth-3 h1 {
+    font-size: 30px;
+    /* Adjust h1 font size */
+  }
+
+  .fourth-1 h4,
+  .fourth-2 h4,
+  .fourth-3 h4 {
+    font-size: 14px;
+    /* Adjust h4 font size */
+  }
+
+  .whiteline {
+    width: 25%;
+    /* Adjust the size of the whiteline image */
+  }
+}
+
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+  .fifth-container {
+    padding: 80px 0;
+    height: auto;
+    /* Allow container height to adjust */
+    flex-direction: column;
+    /* Stack the sections vertically */
+  }
+
+  .fifth-1,
+  .fifth-2 {
+    width: 100%;
+    /* Make both sections take full width on smaller screens */
+    padding: 20px;
+  }
+
+  .fifth-image {
+    max-height: 400px;
+    /* Reduce image size */
+  }
+
+  .fifth-1 h1 {
+    font-size: 50px;
+    /* Adjust h1 font size */
+  }
+
+  .fifth-1 h4 {
+    font-size: 25px;
+    /* Adjust h4 font size */
+  }
+
+  .fifth-1 p {
+    font-size: 18px;
+    /* Adjust paragraph font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .fifth-container {
+    padding: 60px 0;
+    height: auto;
+    /* Allow container height to adjust */
+    flex-direction: column;
+    /* Stack sections vertically */
+  }
+
+  .fifth-1,
+  .fifth-2 {
+    width: 100%;
+    /* Full width */
+    padding: 15px;
+  }
+
+  .fifth-image {
+    max-height: 350px;
+    /* Further reduce image size */
+  }
+
+  .fifth-1 h1 {
+    font-size: 40px;
+    /* Adjust h1 font size */
+  }
+
+  .fifth-1 h4 {
+    font-size: 22px;
+    /* Adjust h4 font size */
+  }
+
+  .fifth-1 p {
+    font-size: 16px;
+    /* Adjust paragraph font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .fifth-container {
+    padding: 30px 0;
+    height: auto;
+    /* Allow container height to adjust */
+    flex-direction: column;
+    /* Stack sections vertically */
+  }
+
+  .fifth-1,
+  .fifth-2 {
+    width: 100%;
+    /* Full width */
+    padding: 10px;
+  }
+
+  .fifth-image {
+    max-height: 300px;
+    /* Reduce image size */
+  }
+
+  .fifth-1 h1 {
+    font-size: 30px;
+    /* Adjust h1 font size */
+  }
+
+  .fifth-1 h4 {
+    font-size: 20px;
+    /* Adjust h4 font size */
+  }
+
+  .fifth-1 p {
+    font-size: 14px;
+    /* Adjust paragraph font size */
+  }
+}
+
+
+/* Media query for tablets (screen width 768px and below) */
+@media (max-width: 768px) {
+  .sixth-container {
+    flex-direction: column; /* Stack the container vertically */
+    align-items: center;
+    padding: 50px 0;
+    height: auto;
+  }
+
+  .sixth-1, .sixth-2 {
+    width: 100%; /* Make each section take full width */
+    height: auto;
+    padding: 20px;
+  }
+
+  .sixth-image {
+    max-width: 80%; /* Limit image width on tablets */
+    max-height: 400px;
+    margin-top: 5vh;
+  }
+
+  .sixth-2 h1 {
+    font-size: 28px; /* Reduce the font size for tablets */
+    margin-top: 50px;
+  }
+
+  .sixth-2 p {
+    font-size: 16px; /* Reduce paragraph font size for tablets */
+  }
+}
+
+/* Media query for mobile (screen width 480px and below) */
+@media (max-width: 480px) {
+  .sixth-container {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    align-items: center;
+    padding: 30px 0;
+    height: auto;
+  }
+
+  .sixth-1, .sixth-2 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .sixth-image {
+    max-width: 90%; /* Further reduce image size for mobile */
+    max-height: 300px;
+    margin-top: 5vh;
+  }
+
+  .sixth-2 h1 {
+    font-size: 24px; /* Further reduce font size on mobile */
+    margin-top: 40px;
+  }
+
+  .sixth-2 p {
+    font-size: 14px; /* Further reduce font size on mobile */
+    text-align: center; /* Ensure text is centered on smaller screens */
+  }
+}

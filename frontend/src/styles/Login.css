@@ -1,0 +1,151 @@
+@font-face {
+  font-family: orbitron;
+  src: url('/assets/fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+  font-family: exo2;
+  src: url('/assets/fonts/Exo2-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: starjedi;
+  src: url('/assets/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: russo;
+  src: url('/assets/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: orbit;
+  src: url('/assets/fonts/ORBIT PERSONAL USE.ttf');
+}
+
+@font-face {
+  font-family: domain;
+  src: url('/assets/fonts/domain font.ttf');
+}
+
+@font-face {
+  font-family: astro;
+  src: url('/assets/fonts/AstroSpace-0Wl3o.otf');
+}
+
+
+
+
+
+
+
+
+/* Center the login container */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #393536;
+}
+
+.login-card {
+  background-color: #9A6B4C;
+  width: 350px;
+  padding: 2rem;
+  border: 4px solid #382824;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.login-title {
+  font-family: orbitron ;
+  font-size: 2rem;
+  color: #241D24;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  font-family: exo2;
+  font-weight: 500;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.4);
+}
+
+.login-button {
+  font-family: russo;
+  letter-spacing: 2px;
+  background-color: #9F342E;
+  color: #262c2e;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #474E50;
+  color: #9F342E;
+}
+
+.login-footer {
+  font-family: exo2;
+  font-size: 1rem;
+  color: #000000;
+  margin-top: 1rem;
+}
+
+.signup-link {
+  font-family: orbitron;
+  color: #3b261b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red; /* Change color as needed */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.show-password-button {
+  font-family: exo2;
+  background: none;
+  border: none;
+  color: #2f241c; /* Bootstrap primary color */
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 18px; /* Adjust font size as needed */
+}

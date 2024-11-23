@@ -1,0 +1,26 @@
+/* Styling for the mouse follower */
+.mouse-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  pointer-events: none; /* Prevent interaction with other elements */
+  z-index: 9999; /* Ensure it's on top of all elements */
+}
+
+/* Styling for the content */
+.content {
+  text-align: center;
+  padding-top: 10vh; /* Space from the top */
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}

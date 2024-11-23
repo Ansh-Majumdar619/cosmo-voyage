@@ -1,0 +1,1378 @@
+@font-face {
+  font-family: orbitron;
+  src: url('/assets/fonts/Orbitron-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+  font-family: exo2;
+  src: url('/assets/fonts/Exo2-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: starjedi;
+  src: url('/assets/fonts/Starjedi.ttf');
+}
+
+@font-face {
+  font-family: russo;
+  src: url('/assets/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: orbit;
+  src: url('/assets/fonts/ORBIT PERSONAL USE.ttf');
+}
+
+@font-face {
+  font-family: domain;
+  src: url('/assets/fonts/domain font.ttf');
+}
+
+@font-face {
+  font-family: astro;
+  src: url('/assets/fonts/AstroSpace-0Wl3o.otf');
+}
+
+
+
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: x mandatory;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-content {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+
+.planet-section {
+  flex: 0 0 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  scroll-snap-align: start;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.planet-section.moon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #B2AB9F;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.moon-left {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.moon-left p {
+  position: absolute;
+  margin-bottom: -3vh;
+  padding: 20px;
+  text-align: left;
+  font-size: 1.4rem;
+  font-family: russo;
+  color: #2f2f2e;
+}
+
+
+.planet-section.moon h1 {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%, 0);
+  font-size: 4rem;
+  color: #696156;
+  font-family: 'Orbit';
+  text-align: center;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.moon-right {
+  flex: 1;
+  background-image: url('../assets/images/main space.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.model-box {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.contact-btn {
+  font-family: orbitron;
+  padding: 10px 20px;
+  background-color: rgb(39, 39, 39);
+  color: whitesmoke;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+.contact-btn:hover {
+  background-color: whitesmoke;
+  color: black;
+  border: 2px solid black;
+}
+
+.planet-section.mars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #663926;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.mars-left {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mars-right {
+  flex: 1;
+  background-image: url('../assets/images/main space.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.planet-section.mars h1 {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%, 0);
+  font-size: 4rem;
+  color: #a08174;
+  font-family: 'Orbit';
+  text-align: center;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.mars-left p {
+  position: absolute;
+  margin-bottom: -3vh;
+  padding: 20px;
+  text-align: left;
+  font-size: 1.3rem;
+  font-family: russo;
+  font-weight: 200;
+  color: #bd7057;
+  gap: 2px;
+}
+
+
+.planet-section.saturn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #343E47;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.saturn-left {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.saturn-right {
+  flex: 1;
+  background-image: url('../assets/images/main space.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.planet-section.saturn h1 {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%, 0);
+  font-size: 4rem;
+  color: #a08174;
+  font-family: 'Orbit';
+  text-align: center;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.saturn-left p {
+  position: absolute;
+  margin-bottom: -3vh;
+  padding: 20px;
+  text-align: left;
+  font-size: 1.3rem;
+  font-family: russo;
+  font-weight: 200;
+  color: #857e65;
+  gap: 2px;
+}
+
+
+.planet-section.euphora {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #5E147E;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.euphora-left {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.euphora-right {
+  flex: 1;
+  background-image: url('../assets/images/main space.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.planet-section.euphora h1 {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%, 0);
+  font-size: 4rem;
+  color: #FED485;
+  font-family: 'Orbit';
+  text-align: center;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.euphora-left p {
+  position: absolute;
+  margin-bottom: -3vh;
+  padding: 20px;
+  text-align: left;
+  font-size: 1.3rem;
+  font-family: russo;
+  font-weight: 200;
+  color: #cda364;
+  gap: 2px;
+}
+
+
+
+.planet-section.black-hole {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #BB8D38;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.black-left {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-right {
+  flex: 1;
+  background-image: url('../assets/images/main space.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.planet-section.black-hole h1 {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%, 0);
+  font-size: 4rem;
+  color: #bebbbb;
+  font-family: 'Orbit';
+  text-align: center;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.black-left p {
+  position: absolute;
+  margin-bottom: -3vh;
+  padding: 20px;
+  text-align: left;
+  font-size: 1.2rem;
+  font-family: russo;
+  font-weight: 200;
+  color: #24242B;
+  gap: 2px;
+}
+
+
+
+
+
+
+
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -10px);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Moon section media query */
+
+/* Mobile Devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+  /* General container styling */
+  .scroll-container {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;  /* Allow horizontal scrolling */
+    overflow-y: auto;  /* Ensure vertical scrolling if needed */
+  }
+
+  .scroll-content {
+    min-width: 100%;
+    display: flex;  /* Ensure content is in a row for horizontal scrolling */
+  }
+
+  /* Adjusting the planet section for mobile */
+  .planet-section {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;  /* Avoid overflow issues */
+  }
+
+  .planet-section.moon {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  /* Adjusting moon-left text styles */
+  .moon-left p {
+    font-size: 0.75rem;  /* Smaller font size for smaller screens */
+    margin-bottom: 10px;  /* Adding margin for spacing */
+    padding: 10px;
+    text-align: left;
+    white-space: normal;  /* Allow text to wrap and avoid overflow */
+    overflow-wrap: break-word;  /* Prevent text overflow by wrapping long words */
+    word-wrap: break-word;  /* Older browsers support */
+  }
+
+  .planet-section.moon h1 {
+    font-size: 2rem;  /* Smaller heading for mobile */
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;  /* Darker color for better contrast */
+    display: none;  /* Hide the h1 element on small screens */
+  }
+
+  .moon-right {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Contact button */
+  .contact-btn {
+    font-size: 0.9rem;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    position: fixed;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact-btn:hover {
+    background-color: #444;
+  }
+
+  /* Adjust model box size for smaller screens */
+  .model-box {
+    height: 200px;  /* Reduce height for small screens */
+    width: 80%;  /* Adjust width to fit smaller screens */
+    margin-top: 30px;  /* Add gap between model box and text */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.moon .moon-left,
+  .planet-section.moon .moon-right {
+    padding: 15px;
+  }
+
+  /* Ensure that the moon-right image is centered properly */
+  .moon-right {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .planet-section {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;  /* Added padding for a cleaner layout */
+  }
+
+  .planet-section.moon {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .moon-left p {
+    font-size: 1rem;  /* Smaller font for tablet devices */
+    margin-bottom: 15px;  /* Add space between paragraphs */
+    padding: 10px;
+    text-align: left;
+    white-space: normal;  /* Ensure text wraps properly */
+    overflow-wrap: break-word;  /* Prevent overflow */
+    word-wrap: break-word;  /* Older browsers support */
+  }
+
+  .planet-section.moon h1 {
+    font-size: 2.5rem;  /* Smaller heading for tablets */
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .moon-right {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Adjust model box size for tablets */
+  .model-box {
+    height: 300px;  /* Reduced height for tablet devices */
+    width: 80%;  /* Adjust width for better fit */
+    margin-top: 50px;  /* Add space between model box and text */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Contact button */
+  .contact-btn {
+    font-size: 1rem;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact-btn:hover {
+    background-color: #444;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.moon .moon-left,
+  .planet-section.moon .moon-right {
+    padding: 15px;
+  }
+
+  /* Ensure that the moon-right image is centered properly */
+  .moon-right {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Mars Section */
+
+
+
+/* Mobile Devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+  /* General container styling */
+  .scroll-container {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-y: auto; /* Ensure vertical scrolling if needed */
+  }
+
+  .scroll-content {
+    min-width: 100%;
+    display: flex; /* Ensure content is in a row for horizontal scrolling */
+  }
+
+  /* Adjusting the planet section for mobile */
+  .planet-section {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden; /* Avoid overflow issues */
+  }
+
+  .planet-section.mars {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  /* Adjusting mars-left text styles */
+  .mars-left p {
+    font-size: 0.75rem; /* Smaller font size for smaller screens */
+    margin-bottom: 10px; /* Adding margin for spacing */
+    padding: 10px;
+    text-align: left;
+    white-space: normal; /* Allow text to wrap and avoid overflow */
+    overflow-wrap: break-word; /* Prevent text overflow by wrapping long words */
+    word-wrap: break-word; /* Older browsers support */
+  }
+
+  .planet-section.mars h1 {
+    font-size: 2rem; /* Smaller heading for mobile */
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333; /* Darker color for better contrast */
+    display: none; /* Hide the h1 element on small screens */
+  }
+
+  .mars-right {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Contact button */
+  .contact-btn {
+    font-size: 0.9rem;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    position: fixed;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact-btn:hover {
+    background-color: #444;
+  }
+
+  /* Adjust model box size for smaller screens */
+  .model-box {
+    height: 200px; /* Reduce height for small screens */
+    width: 80%; /* Adjust width to fit smaller screens */
+    margin-top: 30px; /* Add gap between model box and text */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.mars .mars-left,
+  .planet-section.mars .mars-right {
+    padding: 15px;
+  }
+
+  /* Ensure that the mars-right image is centered properly */
+  .mars-right {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+/* Tablets (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .planet-section {
+    flex-direction: column;
+    height: auto;
+    padding: 15px; /* Added padding for a cleaner layout */
+  }
+
+  .planet-section.mars {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .mars-left p {
+    font-size: 1rem; /* Smaller font for tablet devices */
+    margin-bottom: 15px; /* Add space between paragraphs */
+    padding: 10px;
+    text-align: left;
+    white-space: normal; /* Ensure text wraps properly */
+    overflow-wrap: break-word; /* Prevent overflow */
+    word-wrap: break-word; /* Older browsers support */
+  }
+
+  .planet-section.mars h1 {
+    font-size: 2.5rem; /* Smaller heading for tablets */
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .mars-right {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Adjust model box size for tablets */
+  .model-box {
+    height: 300px; /* Reduced height for tablet devices */
+    width: 80%; /* Adjust width for better fit */
+    margin-top: 50px; /* Add space between model box and text */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Contact button */
+  .contact-btn {
+    font-size: 1rem;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact-btn:hover {
+    background-color: #444;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.mars .mars-left,
+  .planet-section.mars .mars-right {
+    padding: 15px;
+  }
+
+  /* Ensure that the mars-right image is centered properly */
+  .mars-right {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+
+
+
+
+
+/* Saturn Section */
+
+/* Mobile Devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+  /* General container styling */
+  .scroll-container {
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-y: auto; /* Ensure vertical scrolling if needed */
+  }
+
+  .scroll-content {
+    min-width: 100%;
+    display: flex; /* Ensure content is in a row for horizontal scrolling */
+  }
+
+  /* Adjusting the planet section for mobile */
+  .planet-section {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden; /* Avoid overflow issues */
+  }
+
+  .planet-section.saturn {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  /* Adjusting saturn-left text styles */
+  .saturn-left p {
+    font-size: 0.65rem; /* Reduced font size for smaller screens */
+    margin-bottom: 10px; /* Adding margin for spacing */
+    padding: 8px;
+    text-align: left;
+    white-space: normal; /* Allow text to wrap and avoid overflow */
+    overflow-wrap: break-word; /* Prevent text overflow by wrapping long words */
+    word-wrap: break-word; /* Older browsers support */
+  }
+
+  .planet-section.saturn h1 {
+    font-size: 1.8rem; /* Reduced heading size for mobile */
+    margin-top: 10px;
+    padding: 8px 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #333; /* Darker color for better contrast */
+    display: none; /* Hide the h1 element on small screens */
+  }
+
+  .saturn-right {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Contact button */
+  .contact-btn {
+    font-size: 0.75rem; /* Reduced font size */
+    top: 34px;
+    right: 15px;
+    padding: 6px 12px; /* Smaller padding */
+    position: fixed;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact-btn:hover {
+    background-color: #444;
+  }
+
+  /* Adjust model box size and add gap */
+  .model-box {
+    height: 180px; /* Reduced height for small screens */
+    width: 75%; /* Adjust width for better fit */
+    margin: 20px 0; /* Added vertical gap for separation */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.saturn .saturn-left,
+  .planet-section.saturn .saturn-right {
+    padding: 12px;
+  }
+
+  /* Ensure that the saturn-right image is centered properly */
+  .saturn-right {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .planet-section {
+    flex-direction: column;
+    height: auto;
+    padding: 15px; /* Added padding for a cleaner layout */
+  }
+
+  .planet-section.saturn {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .saturn-left p {
+    font-size: 1rem; /* Smaller font for tablet devices */
+    margin-bottom: 15px; /* Add space between paragraphs */
+    padding: 10px;
+    text-align: left;
+    white-space: normal; /* Ensure text wraps properly */
+    overflow-wrap: break-word; /* Prevent overflow */
+    word-wrap: break-word; /* Older browsers support */
+  }
+
+  .planet-section.saturn h1 {
+    font-size: 2.5rem; /* Smaller heading for tablets */
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .saturn-right {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Adjust model box size for tablets */
+  .model-box {
+    height: 300px; /* Reduced height for tablet devices */
+    width: 80%; /* Adjust width for better fit */
+    margin-top: 50px; /* Add space between model box and text */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Contact button */
+  .contact-btn {
+    font-size: 1rem;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact-btn:hover {
+    background-color: #444;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.saturn .saturn-left,
+  .planet-section.saturn .saturn-right {
+    padding: 15px;
+  }
+
+  /* Ensure that the saturn-right image is centered properly */
+  .saturn-right {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+
+
+
+
+/* Euphora Section */
+
+
+
+/* Euphora Section */
+
+/* Mobile Devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+  /* General container styling */
+  .planet-section.euphora {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden; /* Avoid overflow issues */
+  }
+
+  /* Adjusting euphora-left text styles */
+  .euphora-left p {
+    font-size: 0.75rem; /* Smaller font size for mobile screens */
+    margin-bottom: 10px;
+    padding: 8px;
+    text-align: left;
+    white-space: normal; /* Allow text to wrap */
+    overflow-wrap: break-word; /* Prevent text overflow */
+    word-wrap: break-word; /* Older browser support */
+  }
+
+  /* Adjust heading size for mobile */
+  .planet-section.euphora h1 {
+    font-size: 1.8rem; /* Smaller heading for mobile */
+    margin-top: 10px;
+    padding: 8px 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #FED485;
+    display: none; /* Hide the h1 element on small screens */
+  }
+
+  .euphora-right {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Contact button */
+  .contact-btn {
+    font-size: 0.75rem; /* Smaller font size */
+    top: 34px;
+    right: 15px;
+    padding: 6px 12px; /* Smaller padding */
+    position: fixed;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact-btn:hover {
+    background-color: #444;
+  }
+
+  /* Adjust model box size for mobile screens */
+  .model-box {
+    height: 180px; /* Reduced height */
+    width: 75%; /* Adjust width for better fit */
+    margin: 20px 0; /* Add vertical gap */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.euphora .euphora-left,
+  .planet-section.euphora .euphora-right {
+    padding: 12px;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .planet-section.euphora {
+    flex-direction: column;
+    height: auto;
+    padding: 15px; /* Added padding for a cleaner layout */
+  }
+
+  .planet-section.euphora h1 {
+    font-size: 2.5rem; /* Smaller heading for tablets */
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #FED485;
+  }
+
+  .euphora-left p {
+    font-size: 1rem; /* Adjusted font size for tablet screens */
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: left;
+    white-space: normal; /* Ensure text wraps properly */
+    overflow-wrap: break-word; /* Prevent overflow */
+    word-wrap: break-word; /* Older browser support */
+  }
+
+  /* Adjust model box size for tablets */
+  .model-box {
+    height: 250px; /* Reduced height for tablet devices */
+    width: 80%; /* Adjust width */
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Contact button */
+  .contact-btn {
+    font-size: 0.9rem; /* Adjust font size */
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    position: fixed;
+    z-index: 2;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact-btn:hover {
+    background-color: #444;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.euphora .euphora-left,
+  .planet-section.euphora .euphora-right {
+    padding: 15px;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
+
+
+
+
+
+/* Black hole */
+
+
+
+/* Black Hole Section */
+
+/* Mobile Devices (up to 480px) */
+@media only screen and (max-width: 480px) {
+  /* General container styling */
+  .planet-section.black-hole {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden; /* Avoid overflow issues */
+  }
+
+  /* Adjusting black-left text styles */
+  .black-left p {
+    font-size: 0.6rem; /* Smaller font size for paragraphs on mobile screens */
+    margin-bottom: 10px;
+    padding: 8px;
+    text-align: left;
+    white-space: normal; /* Allow text to wrap */
+    overflow-wrap: break-word; /* Prevent text overflow */
+    word-wrap: break-word; /* Older browser support */
+  }
+
+  /* Adjust heading size for mobile */
+  .planet-section.black-hole h1 {
+    font-size: 1.4rem; /* Smaller heading for mobile */
+    margin-top: 10px;
+    padding: 8px 15px;
+    text-align: center;
+    font-weight: bold;
+    color: #FED485;
+    display: none; /* Hide the h1 element on small screens */
+  }
+
+  /* Adjusting other possible text elements */
+  .black-left h2,
+  .black-right h2 {
+    font-size: 1rem; /* Smaller subheading for mobile */
+    margin-bottom: 12px;
+  }
+
+  .black-left span,
+  .black-right span {
+    font-size: 0.7rem; /* Smaller text for span elements */
+  }
+
+  .black-right {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  /* Adjust model box size for mobile screens */
+  .model-box {
+    height: 180px; /* Reduced height */
+    width: 75%; /* Adjust width for better fit */
+    margin: 20px 0; /* Add vertical gap */
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.black-hole .black-left,
+  .planet-section.black-hole .black-right {
+    padding: 12px;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
+
+
+/* Tablets (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .planet-section.black-hole {
+    flex-direction: column;
+    height: auto;
+    padding: 15px; /* Added padding for a cleaner layout */
+  }
+
+  .planet-section.black-hole h1 {
+    font-size: 2.5rem; /* Smaller heading for tablets */
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #FED485;
+  }
+
+  .black-left p {
+    font-size: 1rem; /* Adjusted font size for tablet screens */
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: left;
+    white-space: normal; /* Ensure text wraps properly */
+    overflow-wrap: break-word; /* Prevent overflow */
+    word-wrap: break-word; /* Older browser support */
+  }
+
+  /* Adjust model box size for tablets */
+  .model-box {
+    height: 250px; /* Reduced height for tablet devices */
+    width: 80%; /* Adjust width */
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ensure sections have enough space for touch interaction */
+  .planet-section.black-hole .black-left,
+  .planet-section.black-hole .black-right {
+    padding: 15px;
+  }
+
+  /* Smooth scrolling behavior */
+  .scroll-container {
+    scroll-behavior: smooth;
+  }
+}
