@@ -17,7 +17,7 @@ const Planets = () => {
   useEffect(() => {
     const fetchPlanetsData = async () => {
       try {
-        const response = await API.get('/planet/planets'); // Use the API instance for fetching data
+        const response = await API.get('/planets'); // Use the API instance for fetching data
         setPlanets(response.data);  // Update state with the fetched planet data
       } catch (error) {
         console.error('Error fetching planet data:', error);
