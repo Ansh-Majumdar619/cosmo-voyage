@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Planets.css';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Importing axios for API calls
+import API from '../api'; // Importing API instance from api.js
 
 import MoonModel from '../components/models/MoonModel';
 import MarsModel from '../components/models/MarsModel';
@@ -17,7 +17,7 @@ const Planets = () => {
   useEffect(() => {
     const fetchPlanetsData = async () => {
       try {
-        const response = await axios.get('https://cosmo-voyage-backend.onrender.com/api/users/planets'); // API call to fetch planet data
+        const response = await API.get('/planets'); // Use the API instance for fetching data
         setPlanets(response.data);  // Update state with the fetched planet data
       } catch (error) {
         console.error('Error fetching planet data:', error);
@@ -196,7 +196,12 @@ const Planets = () => {
 
 export default Planets;
 
-
+  
+           
+     
+           
+          
+          
 
 
 
