@@ -9,7 +9,7 @@ const Logout = ({ onLogout }) => {
     const handleLogout = async () => {
       try {
         // Send a request to the backend logout endpoint
-        await axios.post('http://localhost:5000/api/users/logout', {}, {
+        await axios.post('https://cosmo-voyage-backend.onrender.com/api/users/logout', {}, {
           withCredentials: true, // Include cookies if you're using them for auth
         });
 
