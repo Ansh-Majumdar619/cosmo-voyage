@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/Planets.css';
 import { useNavigate } from 'react-router-dom';
 import API from '../api'; // Importing API instance from api.js
-
+import axios from 'axios';
 import MoonModel from '../components/models/MoonModel';
 import MarsModel from '../components/models/MarsModel';
 import SaturnModel from '../components/models/SaturnModel';
@@ -17,7 +17,7 @@ const Planets = () => {
   useEffect(() => {
     const fetchPlanetsData = async () => {
       try {
-        const response = await API.get('/planets'); // Use the API instance for fetching data
+        const response = await axios.get('/planets'); // Use axios to fetch data
         setPlanets(response.data);  // Update state with the fetched planet data
       } catch (error) {
         console.error('Error fetching planet data:', error);
@@ -25,8 +25,7 @@ const Planets = () => {
     };
 
     fetchPlanetsData();
-  }, []); // The empty dependency array ensures this effect runs once when the component mounts
-
+  }, []); 
   // Function to handle button click and navigate to the contact page
   const goToContactPage = () => {
     navigate('/contact'); // This will redirect to the /contact route
