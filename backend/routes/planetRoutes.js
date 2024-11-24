@@ -72,7 +72,7 @@ const planetsData = [
 ];
 
 // GET /planets - Retrieve planet data
-router.get('/planets', (req, res) => {
+router.get('/', (req, res) => {
   res.json(planetsData);
 });
 
