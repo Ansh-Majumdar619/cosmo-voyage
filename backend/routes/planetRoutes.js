@@ -76,4 +76,6 @@ router.get('/', (req, res) => {
   res.json(planetsData);
 });
 
-export default router;
+module.exports = router;
+
+    
