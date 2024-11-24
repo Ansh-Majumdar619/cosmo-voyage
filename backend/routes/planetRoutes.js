@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/planet', planets);
+router.get('/planets', planets);
 
 module.exports = router;
       
