@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Planets.css';
 import { useNavigate } from 'react-router-dom';
-import API from '../api'; // Importing API instance from api.js
-import axios from 'axios';
 import MoonModel from '../components/models/MoonModel';
 import MarsModel from '../components/models/MarsModel';
 import SaturnModel from '../components/models/SaturnModel';
@@ -15,17 +13,13 @@ const Planets = () => {
 
   // Fetch planet data from backend on component mount
   useEffect(() => {
-    const fetchPlanetsData = async () => {
-      try {
-        const response = await axios.get('/planets'); // Use axios to fetch data
-        setPlanets(response.data);  // Update state with the fetched planet data
-      } catch (error) {
-        console.error('Error fetching planet data:', error);
-      }
-    };
-
-    fetchPlanetsData();
+    // Fetch data from the backend
+    fetch('https://cosmo-voyage-backend.onrender.com/api/planets')
+      .then((response) => response.json())
+      .then((data) => setPlanets(data))
+      .catch((error) => console.error('Error fetching planets:', error));
   }, []); 
+
   // Function to handle button click and navigate to the contact page
   const goToContactPage = () => {
     navigate('/contact'); // This will redirect to the /contact route
@@ -196,8 +190,9 @@ const Planets = () => {
 export default Planets;
 
   
-           
-     
+         
+            
+          
            
           
           
