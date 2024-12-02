@@ -14,7 +14,7 @@ const Planets = () => {
   // Fetch planet data from backend on component mount
   useEffect(() => {
     // Fetch data from the backend
-    fetch('https://cosmo-voyage-backend.onrender.com/api/planets')
+    fetch('https://cosmo-voyage-backend.onrender.com/planet/planets')
       .then((response) => response.json())
       .then((data) => setPlanets(data))
       .catch((error) => console.error('Error fetching planets:', error));
